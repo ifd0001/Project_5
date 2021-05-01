@@ -35,7 +35,7 @@ void Warrior::WeaponAttack(Entity * target)
 
 void Warrior::SecondWind(Entity *target)
 {
-    Heal(target, GetStrength() * 2, "Second Wind");
+    Heal(target, GetWisdom() * 2, "Second Wind");
 }
 
 void Warrior::UseAction(Entity * target, const std::string& spellName, const std::string & args)
@@ -53,6 +53,11 @@ void Warrior::UseAction(Entity * target, const std::string& spellName, const std
     if(spellName == "shield_smash")
     {
         ShieldSmash(target);
+        return;
+    }
+    if(spellName == "second_wind")
+    {
+        SecondWind(target);
         return;
     }
     errorFindingAbility(spellName);

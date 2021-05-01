@@ -13,6 +13,11 @@ void Monster::WeaponAttack(Entity *target)
     Attack(target, this->weapon_damage, "WeaponAttack");
 }
 
+void Monster::Berserk(Entity *target)
+{
+    Attack(target, 20, "Berserk");
+}
+
 void Monster::OutputStatus() const
 {
     std::cout << this->Race() << ": " << this->Name()
@@ -26,6 +31,11 @@ void Monster::UseAction(Entity * target, const std::string& spellName, const std
     if(spellName == "weapon_attack")
     {
         WeaponAttack(target);
+        return;
+    }
+    if(spellName == "berserk")
+    {
+        Berserk(target);
         return;
     }
     

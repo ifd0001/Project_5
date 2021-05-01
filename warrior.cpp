@@ -35,7 +35,7 @@ void Warrior::WeaponAttack(Entity * target)
 
 void Warrior::SecondWind(Entity *target)
 {
-    Heal(target, GetWisdom() * 2, "Second Wind");
+    Heal(target, 20, "Second Wind");
 }
 
 void Warrior::UseAction(Entity * target, const std::string& spellName, const std::string & args)

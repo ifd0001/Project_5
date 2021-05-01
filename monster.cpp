@@ -15,7 +15,7 @@ void Monster::WeaponAttack(Entity *target)
 
 void Monster::Berserk(Entity *target)
 {
-    Attack(target, 20, "Berserk");
+    Attack(target, 15, "Berserk");
 }
 
 void Monster::OutputStatus() const
